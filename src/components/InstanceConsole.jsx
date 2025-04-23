@@ -47,9 +47,10 @@ const InstanceTextConsole = () => {
         const operationUrl = ""
         const fd0 = ""
         const controlsec = ""
+        const INCUS_HOST = ""
 
-        const dataUrl = `wss://203.175.66.82:8443/operation/${operationUrl}/websocket?secret=${fd0}`;
-        const controlUrl = `wss://203.175.66.82:8443/operation/${operationUrl}/websocket?secret=${controlsec}`;
+        const dataUrl = `wss://${INCUS_HOST}/operation/${operationUrl}/websocket?secret=${fd0}`;
+        const controlUrl = `wss://${INCUS_HOST}/operation/${operationUrl}/websocket?secret=${controlsec}`;
 
         const data = new WebSocket(dataUrl);
         const control = new WebSocket(controlUrl);
